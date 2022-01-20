@@ -1,0 +1,26 @@
+# Flake8 Configuration Section                                                                                                                                                                                                                                                                                        
+# see: https://flake8.pycqa.org/en/latest/user/configuration.html                                                                                                                                                                                                                                                     
+[flake8]                                                                                                                                                                                                                                                                                                              
+# I201 - Missing newline between import groups.
+# W503 - Line break occurred before a binary operator
+#        see: https://www.flake8rules.com/rules/W503
+ignore = I201, W503
+exclude =
+    .idea,
+    .git,
+    .mypy_cache,
+    .pytest_cache,
+    **/__pycache__,
+    docs,
+    venv,
+    **/*wheel*,
+    **/*egg*
+per-file-ignores =
+    # Ignore "imported but unused" only for __init__ files.
+    __init__.py: F401
+max_complexity = 10
+max_line_length = 120
+max_doc_length=120
+show_source = True
+statistics = True
+

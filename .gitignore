@@ -1,0 +1,38 @@
+# PyCharm
+.idea/
+
+# VSCode
+.vscode/
+
+# Python
+__pycache__/
+*.py[cod]
+.Python
+build/
+develop-eggs/
+dist/
+eggs/
+sdist/
+wheels/
+*.egg-info/
+*.egg
+.env
+.venv
+venv/
+pip-log.txt
+
+# pyenv
+.python-version
+
+# mypy
+.mypy_cache/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+*/.ipynb_checkpoints/*
+
+# General
+.cache
+.history/
+
+
