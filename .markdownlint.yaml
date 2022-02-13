@@ -1,0 +1,51 @@
+# Override the default settings for specific rules used by markdownlint
+#
+# SPDX-FileCopyrightText: 2022 Gary Hammock <https://ghammock.dev>
+# SPDX-License-Identifier: MIT
+#
+# Reference: https://github.com/DavidAnson/markdownlint/blob/main/schema/.markdownlint.yaml
+# Reference: https://github.com/DavidAnson/markdownlint/blob/main/doc/Rules.md
+
+---
+# Default state for all rules
+default: true
+
+# MD013/line-length - Line length
+MD013:
+  line_length: 120
+  stern: true
+  # Tables of more than three columns often use more than 120 chars.
+  tables: false
+
+# MD014/commands-show-output - Dollar signs used before commands without showing output
+MD014: false
+
+# MD024/no-duplicate-heading/no-duplicate-header - Multiple headings with the same content
+MD024:
+  siblings_only: true
+
+# MD033/no-inline-html - Allow (some) inline HTML
+MD033:
+  allowed_elements:
+    - abbr
+    - kbd
+
+# MD044/proper-names - Proper names should have the correct capitalization
+MD044:
+  code_blocks: false
+  names:
+    - Ctrl
+    - Git
+    - GitHub
+    - JavaScript
+    - Linux
+    - Markdown
+    - markdownlint
+    - Node.js
+    - Python
+    - Shift
+
+# MD048/code-fence-style - Code fence style
+MD048:
+  style: backtick
+...

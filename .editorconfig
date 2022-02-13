@@ -1,3 +1,6 @@
+# SPDX-FileCopyrightText: 2022 Gary Hammock <https://ghammock.dev>
+# SPDX-License-Identifier: MIT
+
 root = true
 
 [*]
@@ -9,3 +12,6 @@ insert_final_newline = true
 max_line_length = 120
 tab_width = 4
 
+[{*.yaml, *.yml}]
+indent_size = 2
+tab_width = 2

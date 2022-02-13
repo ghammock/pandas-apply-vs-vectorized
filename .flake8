@@ -1,5 +1,10 @@
-# Flake8 Configuration Section                                                                                                                                                                                                                                                                                        
-# see: https://flake8.pycqa.org/en/latest/user/configuration.html                                                                                                                                                                                                                                                     
+# Flake8 Configuration
+#
+# SPDX-FileCopyrightText: 2022 Gary Hammock <https://ghammock.dev>
+# SPDX-License-Identifier: MIT
+#
+# See: https://flake8.pycqa.org/en/latest/user/configuration.html
+
 [flake8]                                                                                                                                                                                                                                                                                                              
 # I201 - Missing newline between import groups.
 # W503 - Line break occurred before a binary operator

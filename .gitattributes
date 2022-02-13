@@ -1,0 +1,5 @@
+# SPDX-FileCopyrightText: 2022 Gary Hammock <https://ghammock.dev>
+# SPDX-License-Identifier: MIT
+
+# Enforce Unix newlines
+* text=auto eol=lf

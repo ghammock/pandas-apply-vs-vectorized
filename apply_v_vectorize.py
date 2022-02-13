@@ -1,21 +1,21 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 #
-# Gary Hammock, 2022
+# SPDX-FileCopyrightText: 2022 Gary Hammock <https://ghammock.dev>
 # SPDX-License-Identifier: MIT
 #
 # This script shows the massive speed up between using Pandas/NumPy `apply()` and
 # using vectorization.
 
 from functools import wraps
-from typing import Callable
+from typing import Any, Callable, Optional
 
 from line_profiler import LineProfiler  # type: ignore  # line_profiler doesn't provide type hints.
 import numpy as np
 import pandas as pd  # type: ignore  # pandas doesn't provide type hints (yet).
 
 
-def profile(func: Callable) -> Callable:
+def profile(func: Callable[..., Any]) -> Callable[..., Any]:
     """
     Create a decorator for wrapping a provided function in a LineProfiler context.
 
@@ -31,7 +31,7 @@ def profile(func: Callable) -> Callable:
     """
 
     @wraps(func)
-    def wrapper(*args, **kwargs):
+    def wrapper(*args: Optional[Any], **kwargs: Optional[Any]) -> LineProfiler:
         prof = LineProfiler()
         try:
             return prof(func)(*args, **kwargs)
